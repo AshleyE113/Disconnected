@@ -8,9 +8,7 @@ public class MeteorSpawner : MonoBehaviour
     public GameObject Meteor; //enemy prefab
     public float maxSpawnRateInSeconds = 5f;
     public GameObject Player;
-    public PlayerMovement PM;
     public GameObject Endpoint;
-    // Start is called before the first frame update
     void Start()
     {
         Invoke("spawnEnemy", maxSpawnRateInSeconds);

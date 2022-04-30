@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    public PlayerMovement PM;
-    public Animator camAnim;
-    public Animator PlayerUI1, PlayerUI2, PlayerUI3;
+    [SerializeField] PlayerController PC;
+    [SerializeField] Animator camAnim;
+    [SerializeField] Animator PlayerUI1, PlayerUI2, PlayerUI3;
 
     public void CamShake()
     {
         camAnim.SetTrigger("EnemyKillShake");
         Debug.Log("Shaking!1");
         ///*
-        if (PM.playerLives >= 3)
+        if (PC.playerLives >= 3) //change this to if the player is alive AND gets hit by the enemy!
         {
             camAnim.SetTrigger("GotHit");
             PlayerUI1.SetTrigger("PlayerHit");
@@ -22,7 +22,7 @@ public class CameraShake : MonoBehaviour
 
             Debug.Log("GH");
         }
-        else if (PM.playerLives == 2)
+        else if (PC.playerLives == 2)
         {
             camAnim.SetTrigger("GotHit2");
             PlayerUI1.SetTrigger("PlayerHit");
@@ -30,7 +30,7 @@ public class CameraShake : MonoBehaviour
             PlayerUI3.SetTrigger("PlayerHit");
             Debug.Log("GH2");
         }
-        else if (PM.playerLives == 1)
+        else if (PC.playerLives == 1)
         {
             camAnim.SetTrigger("GotHit2");
             PlayerUI1.SetTrigger("PlayerHit");
@@ -50,8 +50,4 @@ public class CameraShake : MonoBehaviour
     }
 
     //if lives is a certain number, use a certain shake. Not working?
-    //public void playerCamShake()
-   // {
-       
-    //}
 }

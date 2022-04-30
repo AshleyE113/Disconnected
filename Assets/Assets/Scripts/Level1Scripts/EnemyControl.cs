@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour
 {
-    //public GameObject playerExplosion;
-
-    public float speed;
+    [SerializeField] float speed;
 
     private CameraShake shake;
-    // Start is called before the first frame update
+
     void Start()
     {
         speed = 2f;
         shake = GameObject.FindGameObjectWithTag("Screenshake").GetComponent<CameraShake>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 position = transform.position;

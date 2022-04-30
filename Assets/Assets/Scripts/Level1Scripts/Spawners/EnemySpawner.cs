@@ -10,7 +10,6 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Enemy; //enemy prefab
     public float maxSpawnRateInSeconds = 5f;
     public GameObject Player;
-    public PlayerMovement PM;
     public GameObject Endpoint;
     void Start()
     {

@@ -2,19 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullets : MonoBehaviour
+public class PlayerBullets : MonoBehaviour
 {
-    public float speed;
-    private CameraShake shake;
-    // Start is called before the first frame update
-    void Start()
-    {
-        speed = 8f;
-        //CameraShake = GameObject.FindGameObjectWithTag("Screenshake").GetComponent<CameraShake>();
-
-    }
-
-    // Update is called once per frame
+    [SerializeField] float speed;    
     void Update()
     {
         //Get the current pos
@@ -29,16 +19,13 @@ public class Bullets : MonoBehaviour
 
         //Destroys bullet if it's outside the screen
         if (transform.position.x > max.x)
-        {
             Destroy(gameObject);
-        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if ((col.tag == "EnemyShip") || (col.tag == "EnemyBullet"))
         {
-            //For quick testing
             Destroy(gameObject);
         }
     }

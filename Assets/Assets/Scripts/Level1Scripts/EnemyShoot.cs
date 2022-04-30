@@ -4,27 +4,21 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    public GameObject EnemyBullets;
+    [SerializeField] GameObject EnemyBullets;
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("FireEnemyBullet", 2f);
+        Invoke("FireBullets", 2f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void FireEnemyBullet()
+    void FireBullets()
     {
         GameObject playerShip = GameObject.Find("Player");
 
         if (playerShip != null)
         {
             Debug.Log("NOT NULL");
-            GameObject bullet = (GameObject)Instantiate(EnemyBullets);
+            GameObject bullet = Instantiate(EnemyBullets);
 
             bullet.transform.position = transform.position;
 

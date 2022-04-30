@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camSpeed: -2
-  PM: {fileID: 0}
+  PC: {fileID: 0}
 --- !u!1 &524806425
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 638995597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 193f787a57107a443b3113b7f5ffd17e, type: 3}
+  m_Script: {fileID: 11500000, guid: 500a974897107654e8dfaeec919175e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullets: {fileID: 8775713888127229093, guid: 18747d11eccaf494e887beff9ee9e0f1, type: 3}
@@ -1648,7 +1648,6 @@ MonoBehaviour:
   Meteor: {fileID: 0}
   maxSpawnRateInSeconds: 5
   Player: {fileID: 638995597}
-  PM: {fileID: 0}
   Endpoint: {fileID: 1157009605}
 --- !u!4 &1108301902
 Transform:
@@ -2290,7 +2289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb34155a70ec2e24fbc6345055f55f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PM: {fileID: 638995603}
+  PC: {fileID: 638995603}
   camAnim: {fileID: 519420030}
   PlayerUI1: {fileID: 1188709718}
   PlayerUI2: {fileID: 797052173}
@@ -2505,7 +2504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camSpeed: 1.7
-  PM: {fileID: 0}
+  PC: {fileID: 638995603}
 --- !u!1 &1396942439
 GameObject:
   m_ObjectHideFlags: 0
@@ -2622,7 +2621,6 @@ MonoBehaviour:
   Enemy: {fileID: 7894194526127332319, guid: 62ceba9828d6e5644b34aa348f542f3a, type: 3}
   maxSpawnRateInSeconds: 7
   Player: {fileID: 7580539313853616657, guid: fa18c7e8ada37e946982e845eb5b16b3, type: 3}
-  PM: {fileID: 0}
   Endpoint: {fileID: 1432710232472310287, guid: 6f7b0cc7362178647a58b9e8d9826e16, type: 3}
 --- !u!4 &1442827844
 Transform:

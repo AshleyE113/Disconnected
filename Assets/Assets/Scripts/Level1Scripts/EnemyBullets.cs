@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBullets : MonoBehaviour
 {
 
-    float speed;
+    [SerializeField] float speed;
     Vector2 _direction;
     bool isReady;
 
@@ -14,18 +14,11 @@ public class EnemyBullets : MonoBehaviour
         speed = 5f;
         isReady = false;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        if (isReady)
+        if (isReady) //Fires the bullet in the player's direction
         {
-            Debug.Log("Is ready");
             Vector2 position = transform.position;
             position += _direction * speed * Time.deltaTime;
 
@@ -34,13 +27,13 @@ public class EnemyBullets : MonoBehaviour
             Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
             Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
+            //destroys the bullet once it's off screen
             if ((transform.position.x < min.x) || (transform.position.x > max.x) ||
             (transform.position.y < min.y) || (transform.position.y > max.y))
             {
                 Destroy(gameObject);
             }
         }
-
     }
 
     public void SetDirection(Vector2 direction)
@@ -49,11 +42,10 @@ public class EnemyBullets : MonoBehaviour
         isReady = true;
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col) //Destroys GO on collison
     {
         if ((col.tag == "PlayerBullet") || (col.tag == "Player"))
         {
-            //For quick testing
             Destroy(gameObject);
         }
     }
