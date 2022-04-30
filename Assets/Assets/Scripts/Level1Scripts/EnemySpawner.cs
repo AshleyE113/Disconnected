@@ -12,7 +12,6 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Player;
     public PlayerMovement PM;
     public GameObject Endpoint;
-    // Start is called before the first frame update
     void Start()
     {
         Invoke("spawnEnemy", maxSpawnRateInSeconds);
